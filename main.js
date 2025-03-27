@@ -84,7 +84,7 @@ async function loadApp(){
         setTimeout(()=>{
             createAppointments();
             resolve();
-        },1000);
+        },1500);
     });
     await myProm;
     console.log("appointments added successfully.")
@@ -105,7 +105,7 @@ async function deleteTask(e){
         
     });
     await myProm;
-    console.log("removed successfully.");
+    console.log("Customer removed successfully.");
 
 
   }
