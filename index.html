@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Coco Dents</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cyborg/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+<link rel="stylesheet" href="style.css">
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+  crossorigin="anonymous"
+></script>
+</head>
+<body>
+    <div class="app">
+        <h4 class="mb-3">Coco Dents</h4>
+      
+        <div id="addNew" data-bs-toggle="modal" data-bs-target="#form">
+          <span>Schedule appointment</span>
+          <i class="fas fa-plus"></i>
+          
+        </div>
+
+        <h5 class="text-center my-3">Appointments</h5>
+
+<div id="appointments" class="card text-white bg-secondary mb-2" style="max-width: 15rem;"></div>
+
+
+      </div>
+
+      <!-- Modal -->
+      <form
+      class="modal fade"
+      id="form"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add New appointment</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Name</p>
+            <input type="text" placeholder="Name" class="form-control" name="" id="nameInput"  />
+            <div id="msg"></div>
+            <br>
+            <p>Lastname</p>
+            <input type="text" placeholder="Lastname" class="form-control" name="" id="lastnaInput" required  />
+            <div id="msg"></div>
+            <br />
+            <p>Date</p>
+            <input type="date" class="form-control" name="" id="dateInput" required />
+            <br />
+            <p>Select a Doctor</p>
+            <select name="doctors" id="doctors" class="form-control">
+                <option value="Kevin Mesen">Kevin Mesen</option>
+                <option value="Rosa Avila">Rosa Avila</option>
+                <option value="Rudy Montes">Rudy Montes</option>
+            </select>
+
+            <br/>
+            <p>Description</p>
+            <textarea
+            required
+              name=""
+              class="form-control"
+              id="textarea"
+              cols="30"
+              rows="5"
+            ></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              Close
+            </button>
+            <button type="submit" id="add" class="btn btn-primary">Add</button>
+          </div>
+        </div>
+      </div>
+      </form>
+      <script src="main.js"></script>
+</body>
+</html>
